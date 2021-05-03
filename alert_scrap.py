@@ -1,17 +1,14 @@
-from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import os
-from twilio.rest import Client
 import time
 
-URL = "https://www.cowin.gov.in/home"
-browser = webdriver.Chrome('/home/prakruti/Documents/Tools/chromedriver')
+URL = ""
+browser = webdriver.Chrome('/path/to/chromedriver')
 while 1:
     browser.get(URL)
     time.sleep(1)
 
-    pincodes = [342001, 342005, 342003, 342006, 342011, 342024, 342027, 342007, 342002, 342004]
+    pincodes = [123456, 1234566]
 
     elem = browser.find_element_by_id("mat-input-0")
     for pincode in pincodes:
